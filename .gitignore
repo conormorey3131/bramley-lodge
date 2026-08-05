@@ -14,3 +14,7 @@ screenshots-review/
 
 # Local Claude Code settings
 .claude/settings.local.json*
+preview-export/
+
+# Client documents — never commit
+*.xlsx
