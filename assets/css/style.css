@@ -152,13 +152,21 @@ abbr[title] { text-decoration: none; }
 /* ---------- Header ---------- */
 .site-header {
   position: fixed; inset: 0 0 auto; z-index: 100;
-  transition: background-color .3s var(--ease), box-shadow .3s var(--ease), padding .3s var(--ease);
+  transition: box-shadow .3s var(--ease), padding .3s var(--ease);
   padding-block: .9rem;
 }
-.site-header.is-scrolled, .site-header--solid {
+/* the blur/background lives on a pseudo-element: backdrop-filter on the header
+   itself would become the containing block for the fixed mobile drawer */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(24, 30, 23, .82);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
+  opacity: 0;
+  transition: opacity .3s var(--ease);
+}
+.site-header.is-scrolled::before, .site-header--solid::before { opacity: 1; }
+.site-header.is-scrolled, .site-header--solid {
   box-shadow: 0 1px 0 rgba(246, 242, 233, .08);
   padding-block: .45rem;
 }
