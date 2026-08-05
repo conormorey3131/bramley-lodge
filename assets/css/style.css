@@ -163,13 +163,14 @@ abbr[title] { text-decoration: none; }
   padding-block: .45rem;
 }
 .header-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.brand {
-  display: inline-flex; align-items: center; gap: .6rem;
-  color: var(--cream); text-decoration: none; z-index: 115; position: relative;
+.brand { display: inline-flex; align-items: center; z-index: 115; position: relative; }
+/* the logo is always the single intact lockup — sized by height, never cropped or split */
+.brand img { width: auto; height: 3.75rem; transition: height .3s var(--ease); }
+.site-header.is-scrolled .brand img, .site-header--solid .brand img { height: 3.1rem; }
+@media (max-width: 53.75em) {
+  .brand img { height: 2.75rem; }
+  .site-header.is-scrolled .brand img { height: 2.4rem; }
 }
-.brand img { width: auto; height: 2.5rem; transition: height .3s var(--ease); }
-.brand-name { font-family: var(--font-display); font-weight: 550; font-size: 1.32rem; line-height: 1; letter-spacing: .01em; white-space: nowrap; }
-.site-header.is-scrolled .brand img, .site-header--solid .brand img { height: 2.1rem; }
 .site-nav ul { display: flex; align-items: center; gap: clamp(1.1rem, 2vw, 2rem); }
 .site-nav a:not(.btn) {
   color: var(--cream); text-decoration: none; font-weight: 500; font-size: .98rem;
@@ -230,19 +231,24 @@ abbr[title] { text-decoration: none; }
 }
 .hero--short { min-height: max(24rem, 62svh); align-items: end; }
 .hero-media, .hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.obj-right { object-position: 78% 45%; }
+/* scrim: strong at the bottom-left text column, fading to the top-right,
+   plus a light overall darken so hero text always clears WCAG AA */
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(rgba(18, 28, 20, .42), rgba(18, 28, 20, .12) 30%, rgba(18, 28, 20, 0) 50%, rgba(18, 37, 28, .78) 92%);
+    linear-gradient(to top right,
+      rgba(20, 25, 20, .75) 0%, rgba(20, 25, 20, .55) 38%,
+      rgba(20, 25, 20, .18) 68%, rgba(20, 25, 20, 0) 100%),
+    rgba(20, 25, 20, .25);
 }
-.hero-inner { padding-block: clamp(5.5rem, 12vh, 8rem) clamp(2.75rem, 7vh, 5rem); }
-.hero-logo { width: clamp(230px, 34vw, 400px); margin-bottom: 1.6rem; }
-.hero h1 { max-width: 15ch; margin-bottom: .4em; }
-.hero-tagline {
-  font-family: var(--font-display); font-weight: 500; letter-spacing: -.01em;
-  font-size: clamp(1.85rem, 3vw + 1rem, 3.3rem); line-height: 1.08;
-  max-width: 17ch; margin: 0 0 .45em; text-wrap: balance;
+.hero-inner { width: 100%; padding-block: clamp(5.5rem, 12vh, 8rem) clamp(2.75rem, 7vh, 5rem); }
+.hero-copy { max-width: 34rem; display: flex; flex-direction: column; align-items: flex-start; }
+.hero-copy h1 {
+  font-size: clamp(2.1rem, 2.6vw + 1rem, 3.4rem); line-height: 1.06;
+  max-width: none; margin-bottom: .4em;
 }
+.hero--short h1 { max-width: 15ch; margin-bottom: .4em; }
 .hero .lede { color: var(--cream-soft); }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
 .hero-meta { margin-top: 2.2rem; font-size: .92rem; color: var(--cream-soft); display: flex; flex-wrap: wrap; gap: .35rem 1.6rem; }
@@ -485,7 +491,7 @@ abbr[title] { text-decoration: none; }
 
 /* ---------- 404 ---------- */
 .error-page { min-height: 100svh; display: grid; place-items: center; text-align: center; background: var(--green-deep); color: var(--cream); padding: 2rem; }
-.error-page img { width: 110px; margin-inline: auto; }
+.error-page img { width: 150px; margin-inline: auto; }
 .error-page .btn { margin: .3rem; }
 
 /* ---------- Small utilities ---------- */
@@ -513,14 +519,13 @@ abbr[title] { text-decoration: none; }
   .hero-media img { animation: kenburns 8s var(--ease) forwards; }
   @keyframes kenburns { from { transform: scale(1.06); } to { transform: scale(1); } }
 
-  .js .hero-inner > * { animation: rise .8s var(--ease) backwards; }
-  /* first child (logo lockup) is the LCP element — rise without opacity so paint isn't delayed */
-  .js .hero-inner > :first-child { animation-name: rise-solid; }
+  .js .hero-copy > *, .js .hero--short .hero-inner > * { animation: rise .8s var(--ease) backwards; }
+  /* first child (the H1) is the LCP element — rise without opacity so paint isn't delayed */
+  .js .hero-copy > :first-child, .js .hero--short .hero-inner > :first-child { animation-name: rise-solid; }
   @keyframes rise-solid { from { transform: translateY(24px); } }
-  .js .hero-inner > :nth-child(2) { animation-delay: .12s; }
-  .js .hero-inner > :nth-child(3) { animation-delay: .24s; }
-  .js .hero-inner > :nth-child(4) { animation-delay: .36s; }
-  .js .hero-inner > :nth-child(5) { animation-delay: .48s; }
+  .js .hero-copy > :nth-child(2), .js .hero--short .hero-inner > :nth-child(2) { animation-delay: .12s; }
+  .js .hero-copy > :nth-child(3), .js .hero--short .hero-inner > :nth-child(3) { animation-delay: .24s; }
+  .js .hero-copy > :nth-child(4), .js .hero--short .hero-inner > :nth-child(4) { animation-delay: .36s; }
   @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
 
   @view-transition { navigation: auto; }
