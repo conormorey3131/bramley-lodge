@@ -1,0 +1,16 @@
+# Raw masters — never commit (folder name has a trailing space)
+July /
+july-photos/
+*.MOV
+
+# Tooling
+node_modules/
+
+# OS noise
+.DS_Store
+
+# Local QA screenshots — not part of the site
+screenshots-review/
+
+# Local Claude Code settings
+.claude/settings.local.json*

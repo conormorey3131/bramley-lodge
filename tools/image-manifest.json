@@ -1,0 +1,367 @@
+{
+  "orangery-room": {
+    "src": "DSC09388.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2000
+    ]
+  },
+  "orangery-room-tall": {
+    "src": "DSC09389.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "set-table-tall": {
+    "src": "DSC09450.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "set-table-dishes": {
+    "src": "DSC09452.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "evening-table-spread": {
+    "src": "DSC09464.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "evening-table": {
+    "src": "DSC09465.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2000
+    ]
+  },
+  "orangery-mural": {
+    "src": "DSC09508.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "bar-menu-marble": {
+    "src": "DSC09394.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "bar-two-pints": {
+    "src": "DSC09400.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "bar-glassware": {
+    "src": "DSC09413.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "bar-spirit-shelves": {
+    "src": "DSC09425.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "mojito-closeup": {
+    "src": "DSC09476.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "mojito-on-bar": {
+    "src": "DSC09484.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "spritz-at-tap": {
+    "src": "DSC09487.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "cocktail-trio": {
+    "src": "DSC09494.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "martini-spritz": {
+    "src": "DSC09499.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "pornstar-martini": {
+    "src": "DSC09501.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "cake-counter": {
+    "src": "DSC09405.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "barista-chalkboards": {
+    "src": "DSC09407.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "coffee-machine": {
+    "src": "DSC09411.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "steaming-milk": {
+    "src": "DSC09503.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "cappuccino-counter": {
+    "src": "DSC09504.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "curry-bowl-topdown": {
+    "src": "DSC09429.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "curry-skewer-bowl": {
+    "src": "DSC09448.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "king-prawns": {
+    "src": "DSC09434.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "king-prawns-plated": {
+    "src": "DSC09457.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "poke-salad": {
+    "src": "DSC09438.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "poke-bowl": {
+    "src": "DSC09443.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "chicken-skewer-salad": {
+    "src": "DSC09467.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "ravioli": {
+    "src": "DSC09475.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "dessert-cake-tall": {
+    "src": "DSC09514.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "dessert-cake": {
+    "src": "DSC09521.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "aerial-terrace": {
+    "src": "DJI_20260722151308_0005_D.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "aerial-carpark": {
+    "src": "DJI_20260722151457_0008_D.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "aerial-estuary": {
+    "src": "DJI_20260722151549_0009_D.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600,
+      2000
+    ]
+  }
+}
