@@ -515,6 +515,22 @@ abbr[title] { text-decoration: none; }
 .menu-hero-note a { color: inherit; }
 .error-page .lede { color: rgba(246, 242, 233, .78); max-width: 32rem; margin-inline: auto; }
 
+/* ---------- Hiring notice ---------- */
+.band--tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.hiring-card {
+  display: grid; gap: 1.6rem; align-items: center;
+  background: var(--white); border-radius: var(--radius);
+  border-top: 3px solid var(--brass); box-shadow: var(--shadow-rest);
+  padding: clamp(1.6rem, 4vw, 2.6rem) clamp(1.4rem, 4vw, 2.8rem);
+}
+@media (min-width: 56em) { .hiring-card { grid-template-columns: 1.4fr .9fr; gap: 3rem; } }
+.hiring-copy h2 { font-size: clamp(1.6rem, 1.2vw + 1.2rem, 2.2rem); }
+.hiring-copy p:last-child { margin-bottom: 0; }
+.hiring-cta { display: flex; flex-direction: column; gap: 1rem; }
+@media (min-width: 56em) { .hiring-cta { align-items: flex-end; text-align: right; } }
+.hiring-email { margin: 0; font-size: .93rem; color: var(--ink-soft); line-height: 1.55; }
+.hiring-email a { color: var(--ink); }
+
 /* ---------- Reveals & motion ---------- */
 @media (prefers-reduced-motion: no-preference) {
   .js .reveal {
