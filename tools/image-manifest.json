@@ -363,5 +363,131 @@
       1600,
       2000
     ]
+  },
+  "terrace-fireplace": {
+    "src": "DSC05983.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "terrace-entrance": {
+    "src": "DSC05986.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "cheesecake-table": {
+    "src": "DSC05998.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "layered-sour": {
+    "src": "DSC08263.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "duck-plate-topdown": {
+    "src": "DSC08269.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "dinner-for-two": {
+    "src": "DSC08278.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "whole-fish-topdown": {
+    "src": "DSC08288.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
+  },
+  "kitchen-flambe": {
+    "src": "DSC08295.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "evening-table-wine": {
+    "src": "DSC08312.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "whole-fish-wine": {
+    "src": "DSC08335.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "duck-plate-wine": {
+    "src": "DSC08337.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "evening-table-wide": {
+    "src": "DSC08351.jpg",
+    "width": 2048,
+    "height": 1152,
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ]
   }
 }

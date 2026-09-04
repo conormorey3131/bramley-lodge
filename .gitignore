@@ -18,3 +18,6 @@ preview-export/
 
 # Client documents — never commit
 *.xlsx
+
+# Second photo shoot masters (Aug 2026) — never commit
+Augustphotos/

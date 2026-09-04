@@ -510,6 +510,7 @@ abbr[title] { text-decoration: none; }
 .video-portrait { border-radius: var(--radius); max-height: 34rem; width: auto; margin-inline: auto; }
 .contact-sub { margin-top: 2rem; }
 .contact-cta { margin: 1.4rem 0; }
+.contact-email { margin: -.4rem 0 1.6rem; }
 .contact-note { margin-top: 1rem; }
 .gallery-note { margin-top: 2rem; }
 .menu-hero-note a { color: inherit; }

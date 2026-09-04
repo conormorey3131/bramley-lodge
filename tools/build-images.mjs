@@ -1,15 +1,17 @@
 // One-off asset pipeline for bramleylodge.ie — NOT needed to serve the site.
 // Usage: node tools/build-images.mjs
 import sharp from 'sharp';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const SRC = path.join(ROOT, 'july-photos');
+const SRC_AUG = path.join(ROOT, 'Augustphotos'); // second shoot, 26 Aug 2026
 const OUT = path.join(ROOT, 'assets', 'img');
 const BRAND = path.join(ROOT, 'assets', 'img', 'brand');
 
-// slug -> { file, hero?: bool }  (hero also gets a 2000w derivative)
+// slug -> { file, hero?: bool, dir?: string }  (hero also gets a 2000w derivative;
+// dir defaults to july-photos, 'august' reads from Augustphotos/)
 const PHOTOS = {
   // interiors
   'orangery-room':        { file: 'DSC09388.jpg', hero: true },
@@ -53,6 +55,23 @@ const PHOTOS = {
   'aerial-terrace':       { file: 'DJI_20260722151308_0005_D.jpg' },
   'aerial-carpark':       { file: 'DJI_20260722151457_0008_D.jpg' },
   'aerial-estuary':       { file: 'DJI_20260722151549_0009_D.jpg', hero: true },
+  // ---- August 2026 shoot (Augustphotos/) ----
+  // terrace & exterior
+  'terrace-fireplace':    { file: 'DSC05983.jpg', dir: 'august' },
+  'terrace-entrance':     { file: 'DSC05986.jpg', dir: 'august' },
+  // dessert
+  'cheesecake-table':     { file: 'DSC05998.jpg', dir: 'august' },
+  // cocktails
+  'layered-sour':         { file: 'DSC08263.jpg', dir: 'august' },
+  // evening dishes
+  'duck-plate-topdown':   { file: 'DSC08269.jpg', dir: 'august' },
+  'dinner-for-two':       { file: 'DSC08278.jpg', dir: 'august' },
+  'whole-fish-topdown':   { file: 'DSC08288.jpg', dir: 'august' },
+  'kitchen-flambe':       { file: 'DSC08295.jpg', dir: 'august' },
+  'evening-table-wine':   { file: 'DSC08312.jpg', dir: 'august' },
+  'whole-fish-wine':      { file: 'DSC08335.jpg', dir: 'august' },
+  'duck-plate-wine':      { file: 'DSC08337.jpg', dir: 'august' },
+  'evening-table-wide':   { file: 'DSC08351.jpg', dir: 'august' },
 };
 
 const WIDTHS = [480, 800, 1200, 1600];
@@ -62,13 +81,17 @@ const FORMATS = [
   ['jpg',  { quality: 72, mozjpeg: true, progressive: true }],
 ];
 
-const manifest = {};
+const MANIFEST = path.join(ROOT, 'tools', 'image-manifest.json');
+let manifest = {};
+try { manifest = JSON.parse(await readFile(MANIFEST, 'utf8')); } catch {}
 
-async function photos() {
+// optional 3rd arg: only build slugs whose dir matches (e.g. `photos august`)
+async function photos(onlyDir) {
   await mkdir(OUT, { recursive: true });
   const jobs = [];
   for (const [slug, cfg] of Object.entries(PHOTOS)) {
-    const src = path.join(SRC, cfg.file);
+    if (onlyDir && (cfg.dir || 'july') !== onlyDir) continue;
+    const src = path.join(cfg.dir === 'august' ? SRC_AUG : SRC, cfg.file);
     const meta = await sharp(src).metadata();
     let widths = WIDTHS.filter((w) => w <= meta.width);
     if (widths.at(-1) !== meta.width && meta.width < 1600) widths.push(meta.width);
@@ -90,7 +113,7 @@ async function photos() {
   let i = 0;
   async function worker() { while (i < jobs.length) await jobs[i++](); }
   await Promise.all(Array.from({ length: 6 }, worker));
-  await writeFile(path.join(ROOT, 'tools', 'image-manifest.json'), JSON.stringify(manifest, null, 2));
+  await writeFile(MANIFEST, JSON.stringify(manifest, null, 2));
   console.log(`photos: ${jobs.length} derivatives written`);
 }
 
@@ -196,5 +219,5 @@ async function ogs() {
 const only = process.argv[2];
 if (!only || only === 'logo') await logo();
 if (!only || only === 'og') await ogs();
-if (!only || only === 'photos') await photos();
+if (!only || only === 'photos') await photos(process.argv[3]);
 console.log('done');

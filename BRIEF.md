@@ -136,7 +136,8 @@ Menus below were extracted from the client's **2026 printed menu PDF** (lunch & 
 - **Phone:** +353 21 488 2499 (display: `021 488 2499`; links: `tel:+353214882499`)
 - **Hours:** Sun–Wed 9:00am–7:30pm (food orders until 7:00pm) · Thu–Sat 9:00am–10:30pm (food orders until 9:00pm). Open seven days, breakfast through dinner.
 - **Socials:** Instagram https://www.instagram.com/bramleylodge_food/ · TikTok https://www.tiktok.com/@bramleylodge · Facebook https://www.facebook.com/BramleyLodge
-- **Careers email:** TODO-CAREERS-EMAIL **[confirm — old site obfuscated it]**
+- **Careers email:** bookings@bramleylodge.ie (confirmed by Conor, Aug 2026)
+- **Contact email:** bookings@bramleylodge.ie (confirmed by Conor, Sep 2026) — shown on Contact and in every footer; phone stays the primary booking CTA.
 - **Positioning phrases** (usable in copy): "the very best of countryside dining" · locally sourced ingredients, local farmers and artisans · everything baked in-house daily · Ballycotton seafood, Clonakilty pudding, Skeaghanore duck (real supplier names from the menus — use naturally, don't overdo).
 
 ### About / Our Story (base copy — light polish allowed, meaning unchanged)
@@ -145,7 +146,7 @@ Menus below were extracted from the client's **2026 printed menu PDF** (lunch & 
 > Bramley Lodge is a family-run restaurant and bar, operating since 2009 on the edge of Fota Island at Tullagreen. We serve locally sourced food because we believe in supporting local businesses, working closely with local farmers and artisans for the freshest produce possible. Open from breakfast to dinner, seven days a week.
 
 ### Careers page copy (base)
-> We're always interested in hearing from hardworking, motivated people. We offer a healthy work–life balance, a transparent pay structure, and real opportunities for advancement. Send us your details and CV at **TODO-CAREERS-EMAIL**.
+> We're always interested in hearing from hardworking, motivated people. We offer a healthy work–life balance, a transparent pay structure, and real opportunities for advancement. Send us your details and CV at **bookings@bramleylodge.ie**.
 
 ### Allergen key (show on every menu page)
 1 Gluten · 2 Crustaceans · 3 Eggs · 4 Fish · 5 Peanuts · 6 Soy beans · 7 Milk · 8 Nuts · 9 Celery · 10 Mustard · 11 Sesame seeds · 12 Sulphur dioxide & sulphites · 13 Lupin · 14 Molluscs
@@ -311,7 +312,7 @@ Full bar with cocktails made to order (mojitos, spritzes, pornstar martinis pict
 - [ ] List of remaining TODOs for Conor (careers email, evening times/prices, geo coords, Granny Grant structure, flagged [confirm] items, DNS switch timing).
 
 ## 16. Open questions for Conor (carry through, don't block on them)
-1. Careers email address for the Join Our Team page.
+1. ~~Careers email address for the Join Our Team page.~~ Resolved: bookings@bramleylodge.ie (also the general contact email).
 2. Breakfast + Orangery evening prices — publish or keep unpriced?
 3. Orangery Evening Menu serving days/times.
 4. Exact map coordinates / Google Business Profile link.
