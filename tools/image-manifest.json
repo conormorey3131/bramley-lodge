@@ -489,5 +489,95 @@
       1200,
       1600
     ]
+  },
+  "crispy-poke-bowl": {
+    "src": "DSC09180.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "lamplit-dinner-table": {
+    "src": "DSC09191.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "evening-main-closeup": {
+    "src": "DSC09193.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "salads-kitchen-pass": {
+    "src": "DSC09165.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "crispy-tacos": {
+    "src": "DSC09171.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "dinner-window-seat": {
+    "src": "DSC09198.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "window-table-for-two": {
+    "src": "DSC09202.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "evening-main-overhead": {
+    "src": "DSC09194.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
+  },
+  "lamplit-table-overhead": {
+    "src": "DSC09196.jpg",
+    "width": 1152,
+    "height": 2048,
+    "widths": [
+      480,
+      800,
+      1152
+    ]
   }
 }

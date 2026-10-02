@@ -7,11 +7,13 @@ import path from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname;
 const SRC = path.join(ROOT, 'july-photos');
 const SRC_AUG = path.join(ROOT, 'Augustphotos'); // second shoot, 26 Aug 2026
+const SRC_SEP = process.env.BRAMLEY_SEPTEMBER_PHOTOS || path.join(ROOT, 'Septemberphotos');
 const OUT = path.join(ROOT, 'assets', 'img');
 const BRAND = path.join(ROOT, 'assets', 'img', 'brand');
 
 // slug -> { file, hero?: bool, dir?: string }  (hero also gets a 2000w derivative;
-// dir defaults to july-photos, 'august' reads from Augustphotos/)
+// dir defaults to july-photos; other shoots use Augustphotos/ or Septemberphotos/)
+// September source override: BRAMLEY_SEPTEMBER_PHOTOS=/path/to/photos node tools/build-images.mjs photos september
 const PHOTOS = {
   // interiors
   'orangery-room':        { file: 'DSC09388.jpg', hero: true },
@@ -72,6 +74,16 @@ const PHOTOS = {
   'whole-fish-wine':      { file: 'DSC08335.jpg', dir: 'august' },
   'duck-plate-wine':      { file: 'DSC08337.jpg', dir: 'august' },
   'evening-table-wide':   { file: 'DSC08351.jpg', dir: 'august' },
+  // September 2026 shoot
+  'crispy-poke-bowl': { file: 'DSC09180.jpg', dir: 'september' },
+  'lamplit-dinner-table': { file: 'DSC09191.jpg', dir: 'september' },
+  'evening-main-closeup': { file: 'DSC09193.jpg', dir: 'september' },
+  'salads-kitchen-pass': { file: 'DSC09165.jpg', dir: 'september' },
+  'crispy-tacos': { file: 'DSC09171.jpg', dir: 'september' },
+  'dinner-window-seat': { file: 'DSC09198.jpg', dir: 'september' },
+  'window-table-for-two': { file: 'DSC09202.jpg', dir: 'september' },
+  'evening-main-overhead': { file: 'DSC09194.jpg', dir: 'september' },
+  'lamplit-table-overhead': { file: 'DSC09196.jpg', dir: 'september' },
 };
 
 const WIDTHS = [480, 800, 1200, 1600];
@@ -91,7 +103,7 @@ async function photos(onlyDir) {
   const jobs = [];
   for (const [slug, cfg] of Object.entries(PHOTOS)) {
     if (onlyDir && (cfg.dir || 'july') !== onlyDir) continue;
-    const src = path.join(cfg.dir === 'august' ? SRC_AUG : SRC, cfg.file);
+    const src = path.join(cfg.dir === 'september' ? SRC_SEP : cfg.dir === 'august' ? SRC_AUG : SRC, cfg.file);
     const meta = await sharp(src).metadata();
     let widths = WIDTHS.filter((w) => w <= meta.width);
     if (widths.at(-1) !== meta.width && meta.width < 1600) widths.push(meta.width);
